@@ -96,15 +96,18 @@ def show_time(hr_count, min_count,device,msg,y_off=0, fill = None, font = None,s
 	        i+=1
 	    if i == (w+x)/2:
 	        while change_time == False:
-		    if GPIO.input(5) == GPIO.HIGH:
-		    	minute_count, hour_count =press(minute_count,hour_count)
-		    	print(minute_count)
-			hour_int = hour_int + hour_count
-			minute_int = minute_int + minute_count
-		    now = datetime.now()
-		    if minute_int != now.minute+minute_count or hour_int != hour_tally+hour_count:
-		        change_time = True
-			altered_time = True
+		    try:
+			if GPIO.input(5) == GPIO.HIGH:
+   		    	    minute_count, hour_count =press(minute_count,hour_count)
+		    	    print(minute_count)
+			    hour_int = hour_int + hour_count
+			    minute_int = minute_int + minute_count
+		        now = datetime.now()
+		        if minute_int != now.minute+minute_count or hour_int != hour_tally+hour_count:
+		            change_time = True
+			    altered_time = True
+		    except KeyboardInterrupt:
+			pass
 
 def static_text():
     #serial = spi(port = 0, device = 0, gpio = noop())
