@@ -1,5 +1,5 @@
 import pigpio
-from explorehat import plugins
+from explorerhat import plugins
 #from shiftregister import ShiftRegister
 
 pi = pigpio.pi()
