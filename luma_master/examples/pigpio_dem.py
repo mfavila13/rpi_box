@@ -3,10 +3,10 @@ from shiftregister import ShiftRegister
 
 pi = pigpio.pi()
 
-a_pin = 19
-b_pin = 26
-clr_pin = 20
-clk_pin = 21
+a_pin = 5
+b_pin = 6
+clr_pin = 13
+clk_pin = 26
 
 sr = ShiftRegister(pi, a_pin, b_pin, clr_pin, clk_pin)
 
