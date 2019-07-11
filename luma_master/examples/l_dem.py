@@ -27,6 +27,7 @@ class Shifter():
 			else:
 				gpio.output(Shifter.inputB,gpio.HIGH)
 			Shifter.tick(self)
+            print(i)
 
 	def clear(self):
 		gpio.output(Shifter.clearPin,gpio.LOW)
@@ -63,6 +64,7 @@ def main():
 			shifter.clear()
 			shifter.setValue(0x0555555)
 			sleep(pause)
+            print("loop")
 	        except KeyboardInterrupt:
         		running=False
 
