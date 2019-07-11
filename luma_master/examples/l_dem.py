@@ -21,13 +21,14 @@ class Shifter():
 	def setValue(self,value):
 		for i in range(8):
 			bitwise=0x800000>>i
-			bit=bitwise&value
+            print(i)
+            bit=bitwise&value
 			if (bit==0):
 				gpio.output(Shifter.inputB,gpio.LOW)
 			else:
 				gpio.output(Shifter.inputB,gpio.HIGH)
 			Shifter.tick(self)
-            print(i)
+            
 
 	def clear(self):
 		gpio.output(Shifter.clearPin,gpio.LOW)
