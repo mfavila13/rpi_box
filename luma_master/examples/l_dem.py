@@ -19,7 +19,7 @@ class Shifter():
 		sleep(self.pause)		
 
 	def setValue(self,value):
-		for i in range(8):
+		for i in range(24):
 			bitwise=0x800000>>i
 			bit=bitwise&value
 			if (bit==0):
