@@ -7,11 +7,11 @@ class Shifter():
     inputB=17
     clock=27
     clearPin=22
-    outputA = 
-    outputB = 
-    s_clock = 
-    s_clear = 
-    s_check = 
+    outputA = 5
+    outputB = 6
+    s_clock = 13
+    s_clear = 26
+    s_check = 25
     bitarray = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     bitnum = 0
 
